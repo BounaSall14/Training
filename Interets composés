@@ -1,0 +1,9 @@
+def calcul_interets_composes(somme_depart, taux_annuel, periodes, versement_mensuel):
+    periodes = periodes * 12
+    taux_mensuel = taux_annuel / 12 /100
+    somme_fin = somme_depart
+    for i in range(periodes):
+        somme_fin = somme_fin * (1 + taux_mensuel)
+        somme_fin = somme_fin + versement_mensuel
+    return somme_fin
+ 
